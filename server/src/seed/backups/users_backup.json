@@ -1,0 +1,13 @@
+[
+  {
+    "_id": "6a7b1d106fcdc36a10da876d",
+    "name": "System Admin",
+    "email": "pt201754@gmail.com",
+    "passwordHash": "dc3020646473a7ec2eafef3a47c27f1ea0f20d684f714ef96d5fdade6f678dfe7d39f53da3222d75def604d3738ea5ca97749f2d9bb16e20a99b6c6ac244950f",
+    "salt": "dde9734f9ea063986125134753db6a46",
+    "role": "admin",
+    "createdAt": "2026-08-11T13:01:04.227Z",
+    "updatedAt": "2026-08-11T13:24:07.242Z",
+    "__v": 0
+  }
+]
