@@ -132,7 +132,7 @@ const runBackendDeploymentTests = async () => {
   console.log(`[PASS] Admin Authentication Record: ${adminUser.email}`);
 
   // Test password matching logic
-  const isCorrectPass = adminUser.matchPassword(process.env.ADMIN_PASSWORD || 'Tiwari@123456');
+  const isCorrectPass = adminUser.matchPassword(process.env.ADMIN_PASSWORD || 'test_admin_password');
   const isWrongPass = adminUser.matchPassword('WrongPassword123!');
   console.log(`[PASS] Password Match Security: CorrectPass=${isCorrectPass} | WrongPass=${!isWrongPass}`);
 
@@ -145,7 +145,7 @@ const runBackendDeploymentTests = async () => {
   const backupPath = path.join(__dirname, 'backups/users_backup.json');
   if (fs.existsSync(backupPath)) {
     const backupContent = fs.readFileSync(backupPath, 'utf-8');
-    const hasPlainPassword = backupContent.includes('"password":') || backupContent.includes('Tiwari@123456');
+    const hasPlainPassword = backupContent.includes('"password":') || backupContent.includes('test_admin_password');
     console.log(`[PASS] Backup File Security Audit: Plaintext secrets present = ${hasPlainPassword}`);
     if (hasPlainPassword) {
       console.error('[FAIL] Backup file contains plaintext passwords.');

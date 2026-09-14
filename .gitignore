@@ -6,12 +6,9 @@ dist/
 dist-ssr/
 
 # Environment files and credentials
-.env
-.env.local
-.env.development
-.env.production
-server/.env
-client/.env
+**/.env
+**/.env.*
+!**/.env.example
 
 # Local upload files
 server/uploads/

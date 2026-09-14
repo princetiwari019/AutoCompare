@@ -23,7 +23,9 @@ export const formatINR = (price) => {
  * Utility function to resolve vehicle image URLs dynamically.
  * Prepends backend URL (http://localhost:5000) for local /uploads/ paths while preserving external URLs.
  */
-const BACKEND_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const BACKEND_URL = import.meta.env.VITE_API_BASE_URL
+  ? import.meta.env.VITE_API_BASE_URL.replace(/\/$/, '')
+  : 'http://localhost:5000';
 
 export const getImageUrl = (url) => {
   if (!url || typeof url !== 'string') return '';
